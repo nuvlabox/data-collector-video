@@ -31,3 +31,7 @@ while True:
   retval, buffer = cv2.imencode('.jpg', frame)
   client.publish("mytopic", buffer.tostring())
 ```
+
+## Copyright
+
+Copyright &copy; 2021, SixSq SA
