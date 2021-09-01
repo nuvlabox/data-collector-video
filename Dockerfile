@@ -1,7 +1,8 @@
 FROM linuxserver/ffmpeg
 
 RUN apt update && \
-    apt install -y --no-install-recommends python3 python3-pip python3-setuptools
+    apt install -y --no-install-recommends python3 python3-pip python3-setuptools  && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY --from=nuvlabox/mqtt-utils /opt/mqtt_utils /opt/mqtt_utils
 
